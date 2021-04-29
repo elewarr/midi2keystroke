@@ -1,0 +1,52 @@
+# example configuration for the midi2keystroke.py script
+
+# encoder 1
+- name: e1d
+  description: Encoder 1 down
+  status: controllerchange
+  channel: 11
+  data: 1 63
+  keys: DIK_LSHIFT DIK_1
+- name: e1p
+  description: Encoder 1 press
+  status: noteon
+  channel: 11
+  data: 0
+  keys: DIK_2
+- name: e1u
+  description: Encoder 1 up
+  status: controllerchange
+  channel: 11
+  data: 1 65
+  keys: DIK_3
+
+# button 1
+- name: b1p
+  description: Button 1 press
+  status: noteon
+  channel: 11
+  data: 8
+  keys: DIK_LSHIFT
+
+# button 2
+- name: b2p
+  description: Button 2 press
+  status: noteon
+  channel: 11
+  data: 9
+  keys: DIK_LSHIFT
+
+# button 3
+- name: b3p
+  description: Button 2 press
+  status: noteon
+  channel: 11
+  data: 10
+  keys: DIK_LSHIFT
+
+- name: Recenter VR view
+  description:
+  status: noteon
+  channel: 11
+  data: 47
+  keys: DIK_NUMPAD5
